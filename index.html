@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Video App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Upload Video for Reversal 🎥</h2>
+        
+        <input type="file" id="videoInput" accept="video/*" onchange="displayFileName()">
+        <p id="fileName"></p>
+        <button class="btn upload-btn" onclick="uploadVideo()">Upload & Reverse</button>
+        <button class="btn remove-btn" id="removeBtn" onclick="removeVideo()">Remove Video</button>
+
+        <div class="loader" id="loader"></div>
+
+        <h3>Reversed Video 🎬</h3>
+        <video id="videoPlayer" controls></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
