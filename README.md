@@ -1,75 +1,80 @@
-# Reverse Video App
+## 🎬 Reverse Video App
 
-## Overview
-The **Reverse Video App** is a web-based tool that allows users to upload a video file and receive a reversed version of that video. The application is built with a **.NET backend** for handling video processing and provides a responsive, user-friendly frontend using **HTML, CSS, and JavaScript**.
-
----
-
-## Features
-- Upload a video file for reversal.
-- Process the video on the server side using .NET.
-- Preview the reversed video directly in the browser.
-- Download the processed video.
-- Responsive design compatible with desktop and mobile browsers.
+The **Reverse Video App** allows users to upload a video, which is then processed on the backend to generate a reversed version. The app features a clean, responsive frontend built with HTML, CSS, and JavaScript, and a powerful backend using ASP.NET Core with integrated video processing logic.
 
 ---
 
-## Technologies Used
+### 🚀 Features
 
-### Frontend
+- Upload a video file from your device.
+- Process and reverse the video server-side.
+- Watch the reversed video directly in your browser.
+- Smooth and responsive UI for all devices.
+
+---
+
+### 🛠️ Tech Stack
+
+#### 🔹 Frontend:
 - HTML
 - CSS
 - JavaScript
 
-### Backend
-- ASP.NET Core (.NET 8)
+#### 🔹 Backend:
+- ASP.NET Core Web API
+- C#
 
-### Video Processing
-- MediaToolkit
-- FFmpeg (via wrapper)
+#### 🔹 Video Processing:
+- FFmpeg (executed within the backend)
 
 ---
 
-## Installation
+### 📦 Installation & Setup
 
-### Prerequisites
-- .NET 8 SDK installed
-- Visual Studio or any C# compatible IDE
+#### 🔧 Prerequisites:
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
 - FFmpeg installed and added to system PATH
 
-### Clone the Repository
+#### 💻 Clone the Repository:
+
 ```bash
 git clone https://github.com/KoteswararaoKotagiri/reverse-video-app.git
 cd reverse-video-app
 ```
 
-### Set Up the Project
-1. Open the solution in Visual Studio.
-2. Restore NuGet packages.
-3. Build the project to ensure everything compiles.
+#### ▶️ Run the Application:
 
-### Run the Application
-- Press `F5` in Visual Studio or run:
+1. Open the solution in **Visual Studio** or run the following command:
+
 ```bash
-dotnet run
+dotnet run --project ReverseVideoApp
 ```
-- Open your browser and navigate to `http://localhost:5000` to access the app.
+
+2. The backend will start at:  
+   `http://localhost:5219/`
+
+3. Open `index.html` in your browser to access the frontend interface.
 
 ---
 
-## How It Works
+### ⚙️ How It Works
 
-### 1. File Upload
-Users can upload a video file via a simple form on the web interface. The backend receives and temporarily stores the file.
+1. **User Uploads Video**:  
+   The frontend allows users to select and upload a video file.
 
-### 2. Video Processing
-The backend uses MediaToolkit/FFmpeg to reverse the video frames and audio stream. The reversed video is saved and returned as a downloadable or viewable file.
+2. **Backend Processing (ASP.NET Core)**:  
+   - Receives the file through an API endpoint.
+   - Calls FFmpeg to reverse both video and audio streams.
+   - Saves the processed output and returns it to the frontend.
 
-### 3. Video Playback
-Once processed, the reversed video is played directly in the browser using a standard HTML5 video player.
+3. **Result Display**:  
+   The reversed video is shown in the browser using a `<video>` tag for immediate playback.
 
 ---
 
-## Contributing
-Contributions are welcome! If you have suggestions, bug fixes, or feature enhancements, feel free to open an issue or submit a pull request.
+### 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to fork the repo, suggest enhancements, or submit a pull request.
+
 
